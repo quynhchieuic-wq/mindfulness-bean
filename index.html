@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mindfulness Bean Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Mindfulness Bean Practice</h1>
+  
+  <div class="jars-container">
+    <!-- Good Thoughts Jar -->
+    <div class="jar">
+      <h2>Good Thoughts</h2>
+      <div id="white-jar" class="bean-display"></div>
+      <button onclick="addBean('white')">+ Add White Bean</button>
+      <p>Count: <span id="white-count">0</span></p>
+    </div>
 
+    <!-- Bad Thoughts Jar -->
+    <div class="jar">
+      <h2>Unhelpful Thoughts</h2>
+      <div id="black-jar" class="bean-display"></div>
+      <button onclick="addBean('black')">+ Add Black Bean</button>
+      <p>Count: <span id="black-count">0</span></p>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button onclick="shareState()">🔗 Share My Jars</button>
+    <button onclick="resetJars()">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
