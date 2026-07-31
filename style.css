@@ -1,0 +1,107 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #2c3e50;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Jars Layout */
+.jars-container {
+  display: flex;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual Glass Jar Design */
+.jar {
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid #cbd5e1;
+  border-radius: 20px 20px 40px 40px;
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #475569;
+}
+
+/* Bean Display Box inside Jar */
+.bean-display {
+  width: 100%;
+  height: 200px;
+  background-color: #ffffff;
+  border: 1px inset #e2e8f0;
+  border-radius: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  word-wrap: break-word;
+  margin-bottom: 15px;
+}
+
+/* Action Buttons */
+button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.actions button {
+  background-color: #10b981;
+}
+
+.actions button:hover {
+  background-color: #059669;
+}
+
+.actions button:last-child {
+  background-color: #ef4444;
+}
+
+.actions button:last-child:hover {
+  background-color: #dc2626;
+}
