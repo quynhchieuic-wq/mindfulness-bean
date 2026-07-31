@@ -1,7 +1,7 @@
-// Parse initial count from URL parameters if someone shared a link
+// 1. Try to load saved counts from Local Storage or URL parameters
 const urlParams = new URLSearchParams(window.location.search);
-let whiteCount = parseInt(urlParams.get('white')) || 0;
-let blackCount = parseInt(urlParams.get('black')) || 0;
+let whiteCount = parseInt(urlParams.get('white')) || parseInt(localStorage.getItem('whiteCount')) || 0;
+let blackCount = parseInt(urlParams.get('black')) || parseInt(localStorage.getItem('blackCount')) || 0;
 
 function updateDisplay() {
   document.getElementById('white-count').innerText = whiteCount;
@@ -10,6 +10,10 @@ function updateDisplay() {
   // Render visual beans
   document.getElementById('white-jar').innerHTML = '⚪ '.repeat(whiteCount);
   document.getElementById('black-jar').innerHTML = '⚫ '.repeat(blackCount);
+
+  // Save progress automatically to browser storage
+  localStorage.setItem('whiteCount', whiteCount);
+  localStorage.setItem('blackCount', blackCount);
 }
 
 function addBean(type) {
@@ -21,6 +25,8 @@ function addBean(type) {
 function resetJars() {
   whiteCount = 0;
   blackCount = 0;
+  localStorage.removeItem('whiteCount');
+  localStorage.removeItem('blackCount');
   updateDisplay();
 }
 
